@@ -1,6 +1,15 @@
 // complete the function
 function palindrom(str) {
   // code goes here
+  str = str.lowerCase();
+  var size = str.length - 1;
+  for (var i = 0; i < Math.floor(size / 2); i++) {
+    if (str[i] !== str[size]) {
+      return false;
+    }
+    size--;
+  }
+  return true;
 }
 
 function solution(arg) {
